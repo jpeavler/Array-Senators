@@ -28,7 +28,7 @@ export const mapping = () => {
   return REPLACE_ME_WITH_CODE
 }
 
-export const birthplaceSeniorSenator = () => {
+export const reducedCount = () => {
   return REPLACE_ME_WITH_CODE
 }
 
