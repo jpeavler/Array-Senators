@@ -20,6 +20,12 @@ yarn test
 
 ## Coding Exercise
 
+## Answer the following questions:
+    1. Why would I use the filter function? To quickly reduce an array to the data I want.
+    2. Why would I use the map function? To quickly reduce the objects inside an array to the data I want.
+    3. Why would I use the reduce function? To tally my data inside an array without knowing what is inside
+    beforehand.
+
 1. Using the senators array of data, perform the following filters, paste your filter code alongside each type of filter:
     1. By Party
         1. Republicans
