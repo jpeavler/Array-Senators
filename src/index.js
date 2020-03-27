@@ -1,35 +1,34 @@
 import Senators from './data/senators'
 
-
+const filterByParty = (party) =>{
+  return Senators.filter((sen) => {
+    return sen.party == party;
+  })
+}
 
 export const republicans = () => {
-  return Senators.filter((sen) => {
-    return sen.party == 'Republican';
-  })
+  return filterByParty("Republican");
 }
 
 export const democrats = () => {
-  return Senators.filter((sen) => {
-    return sen.party == 'Democrat';
-  })
+  return filterByParty("Democrat");
 }
 
 export const independents = () => {
-  return Senators.filter((sen) => {
-    return sen.party == 'Independent';
-  })
+  return filterByParty("Independent");
 }
 
-export const males = () => {
+const filterByGender = (gender) =>{
   return Senators.filter((sen) => {
-    return sen.person.gender == "male";
+    return sen.person.gender == gender;
   })
+}
+export const males = () => {
+  return filterByGender("male");
 }
 
 export const females = () => {
-  return Senators.filter((sen) => {
-    return sen.person.gender == "female";
-  })
+  return filterByGender("female");
 }
 
 export const byState = (state = 'UT') => {
@@ -40,7 +39,12 @@ export const byState = (state = 'UT') => {
 
 export const mapping = () => {
   return Senators.map(sen => {
-    return { firstName: sen.person.firstname, lastName: sen.person.lastname, party: sen.party, gender: sen.person.gender}
+    return { 
+      firstName: sen.person.firstname, 
+      lastName: sen.person.lastname, 
+      party: sen.party, 
+      gender: sen.person.gender
+    }
   })
 }
 
